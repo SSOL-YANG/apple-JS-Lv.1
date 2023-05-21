@@ -10,12 +10,16 @@
   <body>
     <div class="alert-box" id="alert">
       <p>아이디 입력하세요</p>
-      <button onclick="openCloseAlert('none')">x</button>
+      <button id="close">x</button>
     </div>
     <button onclick="openCloseAlert('block')">버튼1</button>
     <button onclick="changeText(); openCloseAlert('block')">버튼2</button>
 
     <script>
+      document.getElementById("close").addEventListener("click", function () {
+        document.getElementById("alert").style.display = "none";
+      });
+
       function openCloseAlert(closeOpen) {
         document.getElementById("alert").style.display = closeOpen;
       }
