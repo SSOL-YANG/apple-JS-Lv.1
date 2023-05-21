@@ -10,17 +10,13 @@
   <body>
     <div class="alert-box" id="alert">
       알림창
-      <button onclick="openCloseAlert()">x</button>
+      <button onclick="openCloseAlert('none')">x</button>
     </div>
-    <button onclick="openCloseAlert()">버튼</button>
+    <button onclick="openCloseAlert('block')">버튼</button>
+
     <script>
-      function openCloseAlert() {
-        const closeButton = document.getElementById("alert");
-        if (closeButton.style.display === "block") {
-          closeButton.style.display = "none";
-        } else {
-          closeButton.style.display = "block";
-        }
+      function openCloseAlert(closeOpen) {
+        document.getElementById("alert").style.display = closeOpen;
       }
     </script>
   </body>
