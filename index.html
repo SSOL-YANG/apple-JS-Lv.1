@@ -9,14 +9,20 @@
   </head>
   <body>
     <div class="alert-box" id="alert">
-      알림창
+      <p>아이디 입력하세요</p>
       <button onclick="openCloseAlert('none')">x</button>
     </div>
-    <button onclick="openCloseAlert('block')">버튼</button>
+    <button onclick="openCloseAlert('block')">버튼1</button>
+    <button onclick="changeText(); openCloseAlert('block')">버튼2</button>
 
     <script>
       function openCloseAlert(closeOpen) {
         document.getElementById("alert").style.display = closeOpen;
+      }
+
+      function changeText() {
+        const text = document.querySelector("#alert p");
+        text.textContent = "비밀번호를 입력하세요.";
       }
     </script>
   </body>
