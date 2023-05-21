@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="alert-box" id="alert">
+      알림창
+      <button onclick="openCloseAlert()">x</button>
+    </div>
+    <button onclick="document.getElementById('alert').style.display='block'">
+      버튼
+    </button>
+    <script>
+      function openCloseAlert() {
+        const closeButton = document.getElementById("alert");
+        if (closeButton.style.display === "block") {
+          closeButton.style.display = "none";
+        } else {
+          closeButton.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
